@@ -30,13 +30,15 @@ console.log(btn_num);
 //所有的操作符按键,没有mod和negate和=，但是包含加减乘除和dot，注意！！！
 let btn_op = document.getElementsByClassName('operator')
 
+let arr = [];
+
 //按下AC实现清零
 btn_ac.onclick = function () {
     calculate_area.innerHTML = '0';
+    arr = [];
 }
 
 //接下来是最复杂的计算部分
-let arr = [];
 for (let i = 0; i < 10; i++) {
     btn_num[i].onclick = function () {
         arr.push(btn_num[i].value);
