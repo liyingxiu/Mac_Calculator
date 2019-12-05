@@ -20,8 +20,10 @@
     /* 显示的数字的位置，大小等 */
     font-size: 35px;
     color: white;
-    padding-left: 260px;
-    padding-top: 50px;
+    text-align: end;
+    padding-right: 5px;
+    /* padding-left: 260px; */
+    padding-top: 110px;
     /* 区域占地，背景 */
     background-color: brown;
     grid-row: 1 / 3;
@@ -29,16 +31,16 @@
 }
 
 /* div中的p居中，字体大小 */
-button p{
+/* button p{
     font-size: 22px;
     text-align: center;
     margin: 50% auto;
-}
+} */
 
 /* 0那个按键的p不居中，手动调整下 */
-#zero{
+/* #zero{
     margin: 26% auto;
-}
+} */
 
 /* 按钮的按键效果，字体颜色设置 */
 button:active{
@@ -48,6 +50,8 @@ button:active{
 }
 
 button{
+    font-size: 22px;
+    text-align: center;
     color: white;
     /* 下面每个按键单独的padding和border的设置可以删掉哈 */
     padding: 0 0 0 0;
