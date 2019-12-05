@@ -58,6 +58,16 @@ btn_neg.onclick = function(){
     }
 }
 
+//百分数化成小数
+btn_mod.onclick = function(){
+    let result =  arr.join('');
+    result = parseFloat(result);
+    result = result/100;
+    calculate_area.innerHTML = result;
+    result = result.toString();
+    arr = result.split('');
+}
+
 
 
 
