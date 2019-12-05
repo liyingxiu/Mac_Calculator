@@ -16,16 +16,21 @@
 }
 
 /* 上面的计算区域 */
-.calculate-aera{
+.calculate-area{
+    /* 显示的数字的位置，大小等 */
+    font-size: 35px;
+    color: white;
+    padding-left: 260px;
+    padding-top: 50px;
+    /* 区域占地，背景 */
     background-color: brown;
     grid-row: 1 / 3;
     grid-column: 1 / -1;
-    /* height: 192.5px; */
 }
 
 /* div中的p居中，字体大小 */
 button p{
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
     margin: 50% auto;
 }
@@ -64,8 +69,8 @@ button{
     grid-row: 3 / 4;
     grid-column: 1 / 2;
 }
-/* 加法和减法 */
-.plus-minus{
+/* 在原来数字的基础上乘以（-1） */
+.negate{
     padding: 0 0 0 0;
     border: none;
     background-color: gray;
