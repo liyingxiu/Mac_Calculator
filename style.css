@@ -1,0 +1,220 @@
+/* 黑色的背景 */
+.grid-container{
+    width: 290px;
+    height: 600px;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    /* 设置间隔 */
+    row-gap: 3px;
+    column-gap: 3px;
+    /* 先行后列 */
+    grid-auto-flow: row;
+}
+
+/* 上面的计算区域 */
+.calculate-aera{
+    background-color: brown;
+    grid-row: 1 / 3;
+    grid-column: 1 / -1;
+    /* height: 192.5px; */
+}
+
+/* div中的p居中，字体大小 */
+button p{
+    font-size: 18px;
+    text-align: center;
+    margin: 50% auto;
+}
+
+/* 0那个按键的p不居中，手动调整下 */
+#zero{
+    margin: 26% auto;
+}
+
+/* 按钮的按键效果，字体颜色设置 */
+button:active{
+    color: white;
+    background: mediumaquamarine;
+    opacity: 0.9;
+}
+
+button{
+    color: white;
+    /* 下面每个按键单独的padding和border的设置可以删掉哈 */
+    padding: 0 0 0 0;
+    border: none;
+}
+
+/* 每一行最后面的计算符号class='operator'变成橘黄色背景 */
+/* 这个地方注意，后面的css样式灰色会把这个orange覆盖掉，以后注意顺序 */
+.operator{
+    background-color: orange;
+}
+
+/* 计算器的第一行first */
+/* 清空 */
+.ac{
+    padding: 0 0 0 0;
+    border: none;
+    background-color: gray;
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+/* 加法和减法 */
+.plus-minus{
+    padding: 0 0 0 0;
+    border: none;
+    background-color: gray;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+
+.mod{
+    padding: 0 0 0 0;
+    border: none;
+    background-color: gray;
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+.division{
+    padding: 0 0 0 0;
+    border: none;
+    /* background-color: gray; */
+    grid-row: 3 / 4;
+    grid-column: -2 / -1;
+}
+
+/* 计算器的第二行second */
+
+.seven{
+    padding: 0 0 0 0;
+    border: none;
+    background-color: gray;
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+}
+
+.eight{
+    padding: 0 0 0 0;
+    border: none;
+    background-color: gray;
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+}
+
+.nine{
+    padding: 0 0 0 0;
+    border: none;
+    background-color: gray;
+    grid-row: 4 / 5;
+    grid-column: 3 / 4;
+}
+
+.multiple{
+    padding: 0 0 0 0;
+    border: none;
+    /* background-color: gray; */
+    grid-row: 4 / 5;
+    grid-column: -2 / -1;
+}
+
+/* 计算器的第三行third */
+
+.four{
+    padding: 0 0 0 0;
+    border: none;
+    background-color: gray;
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+}
+
+.five{
+    padding: 0 0 0 0;
+    border: none;
+    background-color: gray;
+    grid-row: 5 / 6;
+    grid-column: 2 / 3;
+}
+
+.six{
+    padding: 0 0 0 0;
+    border: none;
+    background-color: gray;
+    grid-row: 5 / 6;
+    grid-column: 3 / 4;
+}
+
+.minus{
+    padding: 0 0 0 0;
+    border: none;
+    /* background-color: gray; */
+    grid-row: 5 / 6;
+    grid-column: -2 / -1;
+}
+
+/* 计算器的第四行forth */
+
+.one{
+    padding: 0 0 0 0;
+    border: none;
+    background-color: gray;
+    grid-row: 6 / 7;
+    grid-column: 1 / 2;
+}
+
+.two{
+    padding: 0 0 0 0;
+    border: none;
+    background-color: gray;
+    grid-row: 6 / 7;
+    grid-column: 2 / 3;
+}
+
+.three{
+    padding: 0 0 0 0;
+    border: none;
+    background-color: gray;
+    grid-row: 6 / 7;
+    grid-column: 3 / 4;
+}
+
+.plus{
+    padding: 0 0 0 0;
+    border: none;
+    /* background-color: gray; */
+    grid-row: 6 / 7;
+    grid-column: -2 / -1;
+}
+
+/* 计算器的第五行fifth */
+
+.zero{
+    padding: 0 0 0 0;
+    border: none;
+    height: 105.25px;
+    background-color: gray;
+    grid-row: 7 / 8;
+    grid-column-start: -5;
+    grid-column-end:-3;
+}
+
+.dot{
+    padding: 0 0 0 0;
+    border: none;
+    background-color: gray;
+    grid-row: 7 / 8;
+    grid-column: 3 / 4;
+}
+
+.equal{
+    padding: 0 0 0 0;
+    border: none;
+    /* background-color: gray; */
+    grid-row: 7 / 8;
+    grid-column: 4 / 5;
+}
