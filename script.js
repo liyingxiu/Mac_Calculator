@@ -134,8 +134,13 @@ btn_division.onclick = function(){
 
 //按下等号
 btn_equal.onclick = function(){
+    if(arr1.indexOf('=')>-1){
+        arr1.splice(num, 1);
+    }
+    else{}
     let str = arr1.join('');
     calculate_area.innerHTML = eval(str);
+    arr1 = [];
     arr1.push(str);
     console.log(arr1);
 }
