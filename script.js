@@ -55,7 +55,6 @@ for (let i = 0; i <= 10; i++) {
     btn_num[i].onclick = function () {
         arr.push(btn_num[i].value);
         arr1.push(btn_num[i].value);
-        console.log(arr);
         console.log(arr1);
         calculate_area.innerHTML = arr.join('');
     }
@@ -77,8 +76,8 @@ btn_neg.onclick = function () {
 
 //百分数化成小数
 btn_mod.onclick = function () {
-    let result = arr.join('');
-    result = parseFloat(result);
+    let result = arr1[arr1.length-1];
+    result = eval(result);
     result = result / 100;
     calculate_area.innerHTML = result;
     arr1.push(result);
@@ -116,6 +115,7 @@ btn_equal.onclick = function(){
     let str = arr1.join('');
     calculate_area.innerHTML = eval(str);
     arr1.push(str);
+    console.log(arr1);
 }
 
 
