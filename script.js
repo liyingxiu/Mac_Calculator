@@ -43,35 +43,67 @@ let arr = [];
 //设置arr1保存所有的操作,arr1中存放的每一个元素都是数字或者运算符
 let arr1 = [];
 
+//计数dot出现的次数
+let dot = 0;
+
 //按下AC实现清零
 btn_ac.onclick = function () {
     calculate_area.innerHTML = '0';
     arr = [];
     arr1 = [];
+    dot = 0;
 }
 
 //数字显示部分
-for (let i = 0; i <= 10; i++) {
+for (let i = 0; i < 10; i++) {
     btn_num[i].onclick = function () {
-        arr.push(btn_num[i].value);
+        // arr.push(btn_num[i].value);
         arr1.push(btn_num[i].value);
         console.log(arr1);
-        calculate_area.innerHTML = arr.join('');
+        calculate_area.innerHTML = arr1.join('');
+    }
+}
+
+
+//不允许输入两次dot
+btn_dot.onclick = function () {
+    dot++;
+    if (arr1[arr1.length - 1] === '.') {
+        alert('can not input dot twice');
+    }
+    else if (dot > 1) {
+        alert('can not input dot anymore');
+    }
+    else {
+        arr1.push(btn_dot.value);
+        console.log(arr1);
+        calculate_area.innerHTML = arr1.join('');
+
     }
 }
 
 //取反
+// btn_neg.onclick = function () {
+//     if (arr1[arr1.length-1][0] === '-') {
+//         arr1 = arr1.slice(1);
+//         calculate_area.innerHTML = arr1.join('');
+//     }
+//     else {
+//         arr1.unshift('-');
+//         calculate_area.innerHTML = arr1.join('');
+//     }
+//     let temp = eval(arr1.join(''));
+//     arr1 = [];
+//     arr1.push(temp);
+//     console.log(arr1);
+// }
+
 btn_neg.onclick = function () {
-    if (arr1[arr1.length-1][0] === '-') {
-        arr1 = arr1.slice(1);
-        calculate_area.innerHTML = arr1.join('');
-    }
-    else {
-        arr1.unshift('-');
-        calculate_area.innerHTML = arr1.join('');
-    }
+    arr1[0] = arr1[0] * (-1);
+    calculate_area.innerHTML = arr1[0];
+    let temp = arr1[0];
     arr1 = [];
-    arr1.push(eval(arr.join('')));
+    arr1.push(temp);
     console.log(arr1);
 }
 
@@ -88,62 +120,65 @@ btn_mod.onclick = function () {
 }
 
 //把加减乘除四个操作都记录到arr1中
-btn_plus.onclick = function(){
+btn_plus.onclick = function () {
     //不允许连续两次输入运算操作符
-    if(eval(arr1[arr1.length-1])!=/[1-9]/){
+    if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
         arr1.push(btn_plus.value);
     }
-    else{
+    else {
 
     }
     calculate_area.innerHTML = '';
     arr = [];
+    dot = 0;
 }
 
-btn_minus.onclick = function(){
-    if(eval(arr1[arr1.length-1])!=/[1-9]/){
+btn_minus.onclick = function () {
+    if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
         arr1.push(btn_minus.value);
     }
-    else{
-        
+    else {
+
     }
     calculate_area.innerHTML = '';
     arr = [];
+    dot = 0;
 }
 
-btn_multiple.onclick = function(){
-    if(eval(arr1[arr1.length-1])!=/[1-9]/){
+btn_multiple.onclick = function () {
+    if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
         arr1.push(btn_multiple.value);
     }
-    else{
-        
+    else {
+
     }
     calculate_area.innerHTML = '';
     arr = [];
+    dot = 0;
 }
 
-btn_division.onclick = function(){
-    if(eval(arr1[arr1.length-1])!=/[1-9]/){
+btn_division.onclick = function () {
+    if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
         arr1.push(btn_division.value);
     }
-    else{
-        
+    else {
+
     }
     calculate_area.innerHTML = '';
     arr = [];
+    dot = 0;
 }
 
 //按下等号
-btn_equal.onclick = function(){
+btn_equal.onclick = function () {
     let str = arr1.join('');
     calculate_area.innerHTML = eval(str);
     arr1 = [];
     arr1.push(eval(str));
     console.log(arr1);
-    if(arr1.indexOf('=')>-1){
+    if (arr1.indexOf('=') > -1) {
         arr1.splice(num, 1);
     }
-    else{}
 }
 
 
