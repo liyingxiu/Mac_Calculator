@@ -69,16 +69,15 @@ for (let i = 0; i < 10; i++) {
 btn_dot.onclick = function () {
     dot++;
     if (arr1[arr1.length - 1] === '.') {
-        alert('can not input dot twice');
+        return arr1;
     }
     else if (dot > 1) {
-        alert('can not input dot anymore');
+        return arr1;
     }
     else {
         arr1.push(btn_dot.value);
         console.log(arr1);
         calculate_area.innerHTML = arr1.join('');
-
     }
 }
 
