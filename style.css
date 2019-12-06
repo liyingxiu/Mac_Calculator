@@ -52,9 +52,14 @@
 
 /* 按钮的按键效果，字体颜色设置 */
 button:active{
+    border:none;
     color: rgb(236,236,236);
-    background: mediumaquamarine;
+    background: rgb(181,180,182);
     opacity: 0.9;
+}
+
+button:focus{
+    outline: none;
 }
 
 button{
