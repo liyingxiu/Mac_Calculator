@@ -63,15 +63,15 @@ for (let i = 0; i <= 10; i++) {
 //取反
 btn_neg.onclick = function () {
     if (arr1[arr1.length-1][0] === '-') {
-        arr = arr.slice(1);
-        calculate_area.innerHTML = arr.join('');
+        arr1 = arr1.slice(1);
+        calculate_area.innerHTML = arr1.join('');
     }
     else {
-        arr.unshift('-');
-        calculate_area.innerHTML = arr.join('');
+        arr1.unshift('-');
+        calculate_area.innerHTML = arr1.join('');
     }
     arr1 = [];
-    arr1.push(arr.join(''));
+    arr1.push(eval(arr.join('')));
     console.log(arr1);
 }
 
