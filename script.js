@@ -88,29 +88,51 @@ btn_mod.onclick = function () {
 
 //把加减乘除四个操作都记录到arr1中
 btn_plus.onclick = function(){
-    arr1.push(btn_plus.value);
+    //不允许连续两次输入运算操作符
+    if(eval(arr1[arr1.length-1])!=/[1-9]/){
+        arr1.push(btn_plus.value);
+    }
+    else{
+
+    }
     calculate_area.innerHTML = '';
     arr = [];
 }
 
 btn_minus.onclick = function(){
-    arr1.push(btn_minus.value);
+    if(eval(arr1[arr1.length-1])!=/[1-9]/){
+        arr1.push(btn_minus.value);
+    }
+    else{
+        
+    }
     calculate_area.innerHTML = '';
     arr = [];
 }
 
 btn_multiple.onclick = function(){
-    arr1.push(btn_multiple.value);
+    if(eval(arr1[arr1.length-1])!=/[1-9]/){
+        arr1.push(btn_multiple.value);
+    }
+    else{
+        
+    }
     calculate_area.innerHTML = '';
     arr = [];
 }
 
 btn_division.onclick = function(){
-    arr1.push(btn_division.value);
+    if(eval(arr1[arr1.length-1])!=/[1-9]/){
+        arr1.push(btn_division.value);
+    }
+    else{
+        
+    }
     calculate_area.innerHTML = '';
     arr = [];
 }
 
+//按下等号
 btn_equal.onclick = function(){
     let str = arr1.join('');
     calculate_area.innerHTML = eval(str);
