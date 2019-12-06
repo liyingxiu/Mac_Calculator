@@ -22,6 +22,7 @@
 /* 上面的计算区域 */
 .calculate-area{
     /* 显示的数字的位置，大小等 */
+    font-family: 'Times New Roman', Times, serif;
     font-size: 41px;
     color: white;
     text-align: end;
@@ -33,6 +34,8 @@
     grid-column: 1 / -1;
     /* 圆角边界设置 */
     border-radius: 5px 5px 0 0;
+    /* 超出div部分不显示 */
+    overflow: hidden;
 }
 
 /* div中的p居中，字体大小 */
@@ -49,15 +52,16 @@
 
 /* 按钮的按键效果，字体颜色设置 */
 button:active{
-    color: white;
+    color: rgb(236,236,236);
     background: mediumaquamarine;
     opacity: 0.9;
 }
 
 button{
+    /* font-family: 'Times New Roman', Times, serif; */
     font-size: 22px;
     text-align: center;
-    color: white;
+    color: rgb(236,236,236);
     /* 下面每个按键单独的padding和border的设置可以删掉哈 */
     padding: 0 0 0 0;
     border: none;
