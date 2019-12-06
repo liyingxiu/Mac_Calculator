@@ -70,16 +70,17 @@ btn_neg.onclick = function () {
         arr.unshift('-');
         calculate_area.innerHTML = arr.join('');
     }
+    arr1 = [];
     arr1.push(arr.join(''));
     console.log(arr1);
 }
 
 //百分数化成小数
 btn_mod.onclick = function () {
-    let result = arr1[arr1.length-1];
-    result = eval(result);
+    let result = arr1.join('');
     result = result / 100;
     calculate_area.innerHTML = result;
+    arr1 = [];
     arr1.push(result);
     console.log(arr1);
     result = result.toString();
