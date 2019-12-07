@@ -58,9 +58,9 @@ button{
     border: none;
 }
 
-/* 每一行最后面的计算符号class='operator'变成橘黄色背景 */
+/* 每一行最后面的计算符号class='orange'变成橘黄色背景 */
 /* 这个地方注意，后面的css样式灰色会把这个orange覆盖掉，以后注意顺序 */
-.operator{
+.orange{
     background-color: rgb(253, 158, 43);
 }
 
