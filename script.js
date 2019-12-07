@@ -57,7 +57,7 @@ btn_ac.onclick = function () {
 //数字显示部分
 for (let i = 0; i < 10; i++) {
     btn_num[i].onclick = function () {
-        // arr.push(btn_num[i].value);
+        arr.push(btn_num[i].value);
         arr1.push(btn_num[i].value);
         console.log(arr1);
         calculate_area.innerHTML = arr1.join('');
@@ -136,9 +136,6 @@ btn_minus.onclick = function () {
     if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
         arr1.push(btn_minus.value);
     }
-    else {
-
-    }
     calculate_area.innerHTML = '';
     arr = [];
     dot = 0;
@@ -179,9 +176,3 @@ btn_equal.onclick = function () {
         arr1.splice(num, 1);
     }
 }
-
-
-
-
-
-
