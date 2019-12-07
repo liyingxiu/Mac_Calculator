@@ -49,7 +49,6 @@ let dot = 0;
 //按下AC实现清零
 btn_ac.onclick = function () {
     calculate_area.innerHTML = '0';
-    arr = [];
     arr1 = [];
     dot = 0;
 }
@@ -57,13 +56,11 @@ btn_ac.onclick = function () {
 //数字显示部分
 for (let i = 0; i < 10; i++) {
     btn_num[i].onclick = function () {
-        arr.push(btn_num[i].value);
-        arr1.push(btn_num[i].value);
+        arr1.push(btn_num[i].innerText);
         console.log(arr1);
         calculate_area.innerHTML = arr1.join('');
     }
 }
-
 
 //不允许输入两次dot
 btn_dot.onclick = function () {
@@ -82,21 +79,6 @@ btn_dot.onclick = function () {
 }
 
 //取反
-// btn_neg.onclick = function () {
-//     if (arr1[arr1.length-1][0] === '-') {
-//         arr1 = arr1.slice(1);
-//         calculate_area.innerHTML = arr1.join('');
-//     }
-//     else {
-//         arr1.unshift('-');
-//         calculate_area.innerHTML = arr1.join('');
-//     }
-//     let temp = eval(arr1.join(''));
-//     arr1 = [];
-//     arr1.push(temp);
-//     console.log(arr1);
-// }
-
 btn_neg.onclick = function () {
     arr1[0] = arr1[0] * (-1);
     calculate_area.innerHTML = arr1[0];
@@ -118,7 +100,7 @@ btn_mod.onclick = function () {
     arr = result.split('');
 }
 
-//把加减乘除四个操作都记录到arr1中
+//把加减乘除四个操作都记录到arr1中，四个运算符的操作是一样的
 btn_plus.onclick = function () {
     //不允许连续两次输入运算操作符
     if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
