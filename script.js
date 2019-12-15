@@ -84,52 +84,42 @@ btn_mod.onclick = function () {
     arr = result.split('');
 }
 
-// //把加减乘除四个操作都记录到arr1中，四个运算符的操作是一样的
-// btn_plus.onclick = function () {
-//     if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
-//         arr1.push(btn_plus.value);
-//     }
-//     calculate_area.innerHTML = '';
-//     arr = [];
-//     dot = 0;
-// }
-
-// btn_minus.onclick = function () {
-//     if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
-//         arr1.push(btn_minus.value);
-//     }
-//     calculate_area.innerHTML = '';
-//     arr = [];
-//     dot = 0;
-// }
-
-// btn_multiple.onclick = function () {
-//     if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
-//         arr1.push(btn_multiple.value);
-//     }
-//     calculate_area.innerHTML = '';
-//     arr = [];
-//     dot = 0;
-// }
-
-// btn_division.onclick = function () {
-//     if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
-//         arr1.push(btn_division.value);
-//     }
-//     calculate_area.innerHTML = '';
-//     arr = [];
-//     dot = 0;
-// }
-function handleClick(event) {
+//把加减乘除四个操作都记录到arr1中，四个运算符的操作是一样的
+btn_plus.onclick = function () {
     if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
-        arr1.push(event.target.innerText);
+        arr1.push(btn_plus.value);
     }
     calculate_area.innerHTML = '';
     arr = [];
     dot = 0;
 }
 
-document.querySelector(".operator").onclick = handleClick;
+btn_minus.onclick = function () {
+    if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
+        arr1.push(btn_minus.value);
+    }
+    calculate_area.innerHTML = '';
+    arr = [];
+    dot = 0;
+}
+
+btn_multiple.onclick = function () {
+    if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
+        arr1.push(btn_multiple.value);
+    }
+    calculate_area.innerHTML = '';
+    arr = [];
+    dot = 0;
+}
+
+btn_division.onclick = function () {
+    if (eval(arr1[arr1.length - 1]) != /[1-9]/) {
+        arr1.push(btn_division.value);
+    }
+    calculate_area.innerHTML = '';
+    arr = [];
+    dot = 0;
+}
 
 //按下等号
 btn_equal.onclick = function () {
